@@ -28,3 +28,21 @@
             </div>
         </div>
     </div>
+    <div class="col-md-8 repos">
+        <h1 class="text-center m-2"><u>{{gitUserResults.login}} Repositories </u> </h1>
+
+            <div class="describe" *ngFor="let repositoryResult of repositoryResults">
+                <h3>Name: {{repositoryResult.name}} </h3>
+                <h4>Description: {{repositoryResult.description}}</h4>
+                <h4>Created on: {{repositoryResult.created_at | date}}</h4>
+                <a href="{{repositoryResult.html_url}}" target="blank">
+                    <button class="btn btn-primary" >Repo Details</button>
+                    <hr>
+                </a>
+            </div>
+
+    </div>
+</div>
+
+</div>
+
