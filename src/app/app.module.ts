@@ -11,6 +11,7 @@ import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 // import { FormSearchComponent } from './form-search/form-search.component';
 import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     NotfoundComponent,
     HomepageComponent,
     UserComponent,
+    HighlightDirective,
     // FormSearchComponent
   ],
   imports: [
