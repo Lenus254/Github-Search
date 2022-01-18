@@ -18,4 +18,17 @@ export class SearchService {
   constructor(private http:HttpClient) { 
     this.users = new User('', '', '', 0, '', new Date(), 0, 0);
   }
+  user() {
+    return this.http.get('https://api.github.com/users/' +this.githubusername +'?client_id=' +'&client_secret=' +environment.gitApi
+      )
+      .pipe(
+        map((userResult: any) => {
+        
+
+          return userResult;
+          
+        })
+
+      );
+  }
 }
