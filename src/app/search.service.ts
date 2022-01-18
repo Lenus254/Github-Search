@@ -15,5 +15,7 @@ export class SearchService {
 
   username!: string;
 
-  constructor() { }
+  constructor(private http:HttpClient) { 
+    this.users = new User('', '', '', 0, '', new Date(), 0, 0);
+  }
 }
