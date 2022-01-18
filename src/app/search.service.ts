@@ -8,6 +8,12 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class SearchService {
+  users!: User;
+  githubusername:string="lenus254";
+  repoName!: string;
+    frepos:any;
+
+  username!: string;
 
   constructor() { }
 }
