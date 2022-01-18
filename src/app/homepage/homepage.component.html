@@ -1,1 +1,30 @@
-<p>homepage works!</p>
+<div class="container-fluid">
+
+
+    <div class="row">
+        <h1 class="text-center m-2"> GITHUB USER SEARCH APP</h1>
+        <div class="col-md-4">
+            <div class="image">
+                <img src="{{gitUserResults.avatar_url}}" alt="">
+        
+            </div>
+        
+            <div class="userdetails">
+            <div class="gitdetails">
+                <h3>Username:{{gitUserResults.login}}</h3>
+            </div>
+          
+            <div class="gitdetails">
+                <h3>Followers: {{gitUserResults.followers}}</h3>
+            </div>
+            <div class="gitdetails">
+                <h3>Following: {{gitUserResults.following}}</h3>
+            </div>
+            <div class="gitdetails">
+                <h3>Public Repos: {{gitUserResults.public_repos}}</h3>
+            </div>
+            <div class="gitdetails">
+                <h3>Created on: {{gitUserResults.created_at | date}}</h3>
+            </div>
+        </div>
+    </div>
