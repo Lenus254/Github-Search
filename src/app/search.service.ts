@@ -40,4 +40,34 @@ export class SearchService {
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id="  + "&client_secret=" );
 
   }
+  //Searching Repository 
+
+findRepo(rpname: any) {
+  let mypromise = new Promise<void>((resolve,) => {
+    this.http.get('https://api.github.com/users/' +
+    rpname +'/repos?client_id='
+     +environment.gitApi
+      )
+      .toPromise().then((responseresolve:any) => {
+                  this.frepos= responseresolve;
+          resolve();
+        }
+      );
+  });
+  return mypromise;
+}
+
+
+
+
+
+  fetchRepos() {
+    return this.http.get('https://api.github.com/users/' +this.githubusername +'/repos?client_id=' +environment.gitApi
+      )
+      .pipe(
+        map((reporesults: any) => {
+          return reporesults;
+        })
+      );
+  }
 }
