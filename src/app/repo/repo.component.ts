@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-repo',
@@ -6,10 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repo.component.css']
 })
 export class RepoComponent implements OnInit {
+  
+    repos!:any;
+    foundR= false;
+    fetchedrepo!: string;
 
-  constructor() { }
+  constructor(private repoService:SearchService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {   
   }
 
+  @ViewChild('formInputs') findRepoForm!: NgForm;
+
+  Repsearch() {
+    this.fetchedrepo = this.findRepoForm.value.search;
+    
+    this.repoService.findRepo(this.fetchedrepo).then((response:any) => {
+        this.repos = this.repoService.frepos;
+        this.foundR = true;
+      }
+    );
+
+    }
+
 }
+
