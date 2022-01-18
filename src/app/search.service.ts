@@ -31,4 +31,13 @@ export class SearchService {
 
       );
   }
+  //Search User
+  UpdateUsername(username:string) {
+    this.username = username;
+  }
+
+  getUser() {
+    return this.http.get("https://api.github.com/users/" + this.username + "?client_id="  + "&client_secret=" );
+
+  }
 }
