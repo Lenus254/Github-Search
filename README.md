@@ -42,7 +42,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 * git clone https://github.com/Lenus254/Github-Search
 
-* cd Quotes-app
+* cd Github-Search
 
 * code . or atom . based on the text editor you have.
 
