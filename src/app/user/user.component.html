@@ -21,9 +21,10 @@
             
                     <!-- <li class="list-group-item"><strong>Image: </strong> <img src="{{user.avatar_url}}" alt="profile Image" ></li> -->
                     <li class="list-group-item"><strong>Following: </strong> {{user.following}}</li>
+                    <li class="list-group-item"><strong>Followers: </strong> {{user.followers}}</li>
                     <li class="list-group-item" *ngIf="user.email"><strong>Email: </strong> {{user.email}}</li>
                     <li class="list-group-item" *ngIf="user.location"><strong>Location: </strong> {{user.location}}</li>
-                    <li class="list-group-item"><strong>Repoos: </strong> {{user.public_repos}}</li>
+                    <li class="list-group-item"><strong>Repositories: </strong> {{user.public_repos}}</li>
                     <li class="list-group-item"><strong>Created: </strong> {{user.created_at|date }}</li>
                 </ul>
             </div>
