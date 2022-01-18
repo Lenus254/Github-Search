@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row repos" *ngIf="foundR">
              <div  *ngFor="let repo of repos; ">
-                <h3>Repo Name: {{repo.name}} </h3>
+                <h3 appHighlight>Repo Name: {{repo.name}} </h3>
                 <h5>Description: {{repo.description}}</h5>
                 <h5>Date Created: {{repo.created_at | date}}</h5>
                 <a href="{{repo.html_url}}" target="blank">
